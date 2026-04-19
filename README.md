@@ -80,30 +80,66 @@
     80|
     81|---
     82|
-    83|## 📈 GitHub Stats
-    84|
-    85|<p align="center">
-    86|  <img height="160" src="https://github-readme-stats.vercel.app/api?username=nasaladonerd-web&show_icons=true&theme=tokyonight&hide_border=true" />
-    87|  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nasaladonerd-web&layout=compact&theme=tokyonight&hide_border=true" />
-    88|</p>
-    89|
-    90|---
-    91|
-    92|## 📫 Contato
-    93|
-    94|<p align="center">
-    95|  <a href="https://www.linkedin.com/in/nasaladonerd-web"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-    96|  <a href="mailto:nasaladonerd@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-    97|  <a href="https://wa.me/55XXXXXXXXXXX"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
-    98|</p>
-    99|
-   100|<p align="center">
-   101|  <i>💬 Aberto a projetos, parcerias e oportunidades. Vamos conversar!</i>
-   102|</p>
-   103|
-   104|---
-   105|
-   106|<p align="center">
-   107|  <img src="https://komarev.com/ghpvc/?username=nasaladonerd-web&color=blue&style=flat-square" alt="Profile views" />
-   108|</p>
+## 📈 GitHub Stats
+
+<div align="center">
+
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=nasaladonerd-web&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
+  &nbsp;&nbsp;
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nasaladonerd-web&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
+
+  <br/><br/>
+
+  <img width="600" src="https://github-readme-streak-stats.herokuapp.com/?user=nasaladonerd-web&theme=tokyonight&hide_border=true" />
+
+  <br/><br/>
+
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=nasaladonerd-web&theme=tokyo-night&hide_border=true&area=true" width="90%" />
+
+</div>
+
+---
+
+## 🏆 Troféus
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=nasaladonerd-web&theme=tokyonight&no-frame=true&column=7&margin-w=10" />
+</p>
+
+---
+
+## 📫 Contato
+
+<div align="center">
+
+  <a href="https://www.linkedin.com/in/nasaladonerd-web"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  &nbsp;
+  <a href="mailto:nasaladonerd@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  &nbsp;
+  <a href="https://wa.me/5521981648002"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+  &nbsp;
+  <a href="https://github.com/nasaladonerd-web"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+
+  <br/><br/>
+
+  📍 **Mesquita — RJ, Brasil** &nbsp;|&nbsp; 📞 **(21) 98164-8002** &nbsp;|&nbsp; 📧 **nasaladonerd@gmail.com**
+
+  <br/>
+
+  <i>💬 Aberto a projetos, parcerias e oportunidades profissionais.<br/>
+  Vamos construir algo juntos! 🚀</i>
+
+</div>
+
+---
+
+<div align="center">
+
+  <img src="https://komarev.com/ghpvc/?username=nasaladonerd-web&color=0077B5&style=for-the-badge&label=VISITAS+AO+PERFIL" alt="Profile views" />
+
+  <br/><br/>
+
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0077B5&height=80&section=footer" width="100%" />
+
+</div>
    109|
