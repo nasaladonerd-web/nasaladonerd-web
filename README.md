@@ -130,7 +130,7 @@ Idiomas:         Português (nativo) • Français (intermédiaire) • English 
 ## 🏆 Troféus
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=nasaladonerd-web&theme=tokyonight&no-frame=true&column=7&margin-w=10" />
+  <img src="https://github-trophies.vercel.app/?username=nasaladonerd-web&theme=tokyonight&no-frame=true&column=7&margin-w=10" alt="Troféus GitHub" />
 </p>
 
 ---
