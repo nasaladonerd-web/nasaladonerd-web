@@ -67,9 +67,7 @@ Idiomas:         Português (nativo) • Français (intermédiaire) • English 
 
 > 📌 *Repositórios em construção - novos projetos sendo publicados regularmente.*
 >
-> 🔄 **Mantenha os links dos projetos sempre atualizados conforme novas publicações!**
->
-> 🚀 **Início de jornada:** este perfil será atualizado com projetos práticos e evolução contínua.
+> � *Início de jornada — projetos práticos e evolução contínua.*
 
 ---
 
@@ -106,8 +104,6 @@ Idiomas:         Português (nativo) • Français (intermédiaire) • English 
   &nbsp;
   <img src="https://img.shields.io/badge/Portfólio-Em%20construção-6c757d?style=for-the-badge&logo=github&logoColor=white" />
 </div>
-
-> Atualmente estou estruturando meu currículo e portfólio. Em breve esta seção terá os links oficiais.
 
 ---
 
