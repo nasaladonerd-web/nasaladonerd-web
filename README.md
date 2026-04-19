@@ -67,7 +67,7 @@ Idiomas:         Português (nativo) • Français (intermédiaire) • English 
 
 > 📌 *Repositórios em construção - novos projetos sendo publicados regularmente.*
 >
-> � *Início de jornada — projetos práticos e evolução contínua.*
+> 🚀 *Início de jornada — projetos práticos e evolução contínua.*
 
 ---
 
