@@ -122,7 +122,7 @@
 
   <br/><br/>
 
-  📍 **Mesquita — RJ, Brasil** &nbsp;|&nbsp; 📞 **(21) 98164-8002** &nbsp;|&nbsp; 📧 **nasaladonerd@gmail.com**
+  📍 **Rio de Janeiro — RJ, Brasil** &nbsp;|&nbsp; 📞 **(21) 98164-8002** &nbsp;|&nbsp; 📧 **nasaladonerd@gmail.com**
 
   <br/>
 
@@ -142,4 +142,4 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0077B5&height=80&section=footer" width="100%" />
 
 </div>
-   109|
+   
