@@ -2,9 +2,9 @@
 > **Civil Engineer** | Consultorias | Inteligencia Artificial | Soluções Téclológicas.
 ---
 
-## ⚡ O Projeto do Ecossistema Synergie
+## ⚡ Ecossistema Synergie
 
-O Projeto **Synergie** é um pporjeto para o desenvolvimento de um ecossistema de workspaces concebido sob o princípio de soberania tecnológica, automação fail-fast e isolamento criptográfico. Dividido em duas frentes complementares, o ecossistema atende tanto à engenharia analítica e diária  de desenvolvimento de soluções tecnológicas, quanto à auditoria defensiva e ofensiva de infraestrutura crítica.
+O Projeto **Synergie** é um projeto para o desenvolvimento de um ecossistema de workspaces concebido sob o princípio de soberania tecnológica, automação fail-fast e isolamento criptográfico. Dividido em duas frentes complementares, o ecossistema atende tanto à engenharia analítica e diária  de desenvolvimento de soluções tecnológicas, quanto à auditoria defensiva e ofensiva de infraestrutura crítica.
 
 <table border="0" width="100%">
   <tr>
@@ -41,7 +41,7 @@ Para mitigar os riscos inerentes à execução de ferramentas hiper-agressivas d
 ### 🛡️ As 4 Camadas de Blindagem do Host
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/nasaladonerd-web/nasaladonerd-web/main/kali_container_architecture.svg" alt="Synergie Pentest Architecture" width="50%" style="max-width:750px;">
+  <img src="https://raw.githubusercontent.com/nasaladonerd-web/nasaladonerd-web/main/kali_container_architecture.svg" alt="Synergie Securyt" width="50%" style="max-width:750px;">
 </p>
 
 1. **Camada de Identidade (`userns-remap`):** O usuário `root` dentro do contêiner é mapeado para um usuário comum e sem privilégios no Host. Mesmo se um exploit quebrar o contêiner, o atacante ganha acesso ao seu computador real como um usuário totalmente inofensivo.
@@ -79,10 +79,8 @@ A integridade estrutural, a rastreabilidade e a confiabilidade de todos os artef
 
 ---
 
-## 📬 Contato & Parcerias Comerciais
+## 📬 Contato & Parcerias 
 
-Se você busca uma infraestrutura soberana para IA local, precisa alugar ou contratar o nosso workspace militarizado e isolado para testes de intrusão, ou necessita de consultoria em engenharia civil e governança de processos:
-
-* 💼 **LinkedIn / Portfólio Executivo:** `[Insira seu link do LinkedIn aqui]`
-* 📧 **E-mail Corporativo:** `[Insira seu e-mail institucional aqui]`
+* 💼 **LinkedIn:** `[Insira seu link do LinkedIn aqui]`
+* 📧 **E-mail:** `[Insira seu e-mail institucional aqui]`
 * 🤖 **Código Aberto:** Explore a organização e controle estrutural do ecossistema no repositório público `nasaladonerd-web/felipe`.
