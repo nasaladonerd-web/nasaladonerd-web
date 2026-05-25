@@ -1,98 +1,275 @@
-# 🏢 Quem sou eu?
+---
+title: "Kali Pentest Container — Hardened"
+description: "Ambiente Docker Kali Linux para pentest com isolamento avançado, automação, hardening, logging e volumes persistentes. Estrutura validada conforme diagrama SVG."
+doc_type: RUNBOOK
+system: kali-pentest
+sector: 01_SOFTWARE
+owner: felipe
+status: vigente
+version: "1.0.0"
+created_at: "2026-05-25"
+updated_at: "2026-05-25"
+tags:
+  - kali
+  - pentest
+  - container
+  - docker
+  - hardening
+  - seccomp
+  - apparmor
+  - userns-remap
+  - logging
+  - automacao
+  - persistencia
+  - blue-team
+  - red-team
+  - governanca
+  - documentacao
+ai_summary: "Runbook do ambiente Kali Linux containerizado para pentest, com hardening avançado, isolamento, automação, logging seguro e volumes persistentes. Inclui diagrama de arquitetura SVG, estrutura de diretórios, componentes-chave, instruções de uso e práticas de segurança."
+canonical_topics:
+  - kali-pentest-container
+  - hardening-kali-docker
+  - seccomp-apparmor-pentest
+  - userns-remap-docker
+  - logging-pentest-container
+  - automacao-pentest
+  - blue-red-team-integration
+  - governanca-documental
+token_budget_hint: 3000
+source: "./README.md"
+---
 
-> **Civil Engineer**  & **Software Engineer**|
+# Pentest_Workspace — Ambiente Kali Hardened
 
-## ⚡ Projeto Ecossistema Synergie
-
-O **Synergie** é um projeto de construção de um ecossistema de workspaces, concebidos sob o princípios de soberania tecnológica, automaçãos **fail-fast** e **isolamento** adequado. Dividido em duas frentes complementares, o ecossistema atende tanto à engenharia analítica de dados quanto à auditoria defensiva e ofensiva de infraestruturas críticas.
-
-<table border="0" width="100%">
-  <tr>
-    <td width="50%" valign="top" style="border: none; padding-right: 15px;">
-      <h3>🤖 Synergie Core (Open-Core)</h3>
-      <p>Workspace de engenharia totalmente apoiado por assistentes inteligentes locais e orquestração multi-LLM independente da nuvem.</p>
-      <ul>
-        <li><b>IA 100% Local:</b> Modelos executados via Ollama/llama.cpp com logs agregados e dashboards dedicados.</li>
-        <li><b>Ensemble de Modelos:</b> Orquestração inteligente com tomada de decisão baseada em voto conceitual mitigando alucinações.</li>
-        <li><b>Governança Ativa:</b> Validação automática de schemas e metadados sob modo estrito e impeditivo <i>fail-fast</i>.</li>
-      </ul>
-      <br>
-      <p>➔ <code>Foco: Produtividade, privacidade absoluta e conformidade corporativa.</code></p>
-    </td>    
-    <td width="50%" valign="top" style="border: none; padding-left: 15px;">
-<h3>🛡️ Synergie Security Edition (Premium)</h3>
-      <p>Ambiente isolado sob demanda para auditoria ofensiva e Pentesting profissional, estruturado sobre contêineres Kali Linux de alta confiabilidade.</p>
-      <ul>
-        <li><b>Isolamento Avançado:</b> Proteção de infraestrutura baseada em <code>userns-remap</code>, perfis AppArmor e filtros via Seccomp.</li>
-        <li><b>Execução Imutável:</b> Contêiner operando com <code>rootfs</code> read-only, mitigação <code>--cap-drop=ALL</code> e limites estritos (4G RAM / 512 PIDs).</li>
-        <li><b>Segregação de Redes:</b> Modos de rede customizados para Pentest interno (LAN via macvlan) ou alvos externos isolados do host.</li>
-      </ul>
-      <br>
-      <p>➔ <code>Foco: Auditorias comerciais de segurança e laboratórios temporários de cybersecurity.</code></p>
-    </td>
-  </tr>
-</table>
+> Ambiente institucional para pentest seguro, automação, hardening, logging e persistência, com governança e documentação completa.
 
 ---
 
-## 🛠️ Arquitetura de Isolamento e Segurança (Security Edition)
+## 1. Visão Geral
 
-Para mitigar os riscos inerentes à execução de ferramentas hiper-agressivas de auditoria e exploração (como `nmap`, `metasploit-framework` e `hydra`), a infraestrutura do ecossistema opera sob o princípio de **Defesa em Profundidade**. O ambiente de execução do Kali Linux é envelopado por quatro camadas concêntricas de isolamento que blindam completamente o sistema hospedeiro (*Host*) contra qualquer vazamento de execução ou tentativa de elevação de privilégio:
+- **Propósito:** Prover um ambiente Kali Linux containerizado, seguro e auditável, para operações de pentest, automação, blue/red teaming e integração com IA.
+- **Destaques:** Hardening avançado (rootfs read-only, seccomp, AppArmor, userns-remap), logging seguro, volumes persistentes, scripts de automação, documentação institucional.
 
-### 🛡️ As 4 Camadas de Blindagem do Host
+---
 
-1. **Camada de Identidade (`userns-remap`):** O usuário `root` dentro do contêiner é mapeado para um usuário comum e sem privilégios no Host. Mesmo se um exploit quebrar o contêiner, o atacante ganha acesso ao seu computador real como um usuário totalmente inofensivo.
-2. **Camada de Restrição do Kernel (`Seccomp` & `AppArmor`):** Filtros rígidos de chamadas de sistema (`Seccomp`) barram syscalls perigosas, enquanto o perfil do `AppArmor` confina os processos do contêiner, impedindo que acessem arquivos ou diretórios sensíveis do Host.
-3. **Camada de Imutabilidade Estrita (`rootfs` read-only):** Todo o sistema de arquivos do Kali opera em modo somente-leitura. Malwares e payloads não conseguem se fixar ou modificar os binários do sistema, garantindo um ambiente estéril e livre de persistência maliciosa a cada execução.
-4. **Camada de Contenção Física (Limites de Hardware):** Tetos rígidos de memória (4G RAM) e tabela de processos (`512 PIDs`) neutralizam ataques de Negação de Serviço (DoS) e scripts recursivos (como *Fork Bombs*), mantendo o Host perfeitamente estável.
+## 2. Diagrama de Arquitetura
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/nasaladonerd-web/nasaladonerd-web/main/kali_container_architecture.svg" alt="Synergie Pentest Architecture" width="100%" style="max-width:750px;">
+  <img src="kali_container_architecture.svg" alt="Diagrama de arquitetura do container Kali hardened" width="700"/>
 </p>
 
-## 🌐 Políticas de Segregação de Rede Dinâmica
+---
 
-O gerenciamento de conexões do workspace é projetado sob critérios rígidos de auditoria autorizada e contenção de tráfego, permitindo o chaveamento seguro entre dois modos de rede isolados, conforme o escopo e os termos de consentimento da homologação técnica:
+## 3. Estrutura de Diretórios
 
-- Modo --internal (Avaliação de Perímetro Interno / LAN): Utiliza drivers macvlan para associar um endereço IP dedicado da sub-rede local ao contêiner. Esta configuração é estritamente voltada para testes de conformidade, inventário de ativos e análise de vulnerabilidades em topologias internas (como switches, roteadores e servidores locais corporativos), operando com total transparência de tráfego para os sistemas de monitoramento da TI.
-
-- Modo --external (Simulação de Vetores Externos / Cloud): Conecta o contêiner a uma interface de ponte (bridge) isolada, utilizando mascaramento de rede (NAT) e políticas restritivas no firewall iptables do Host. Este modo é desenhado para auditorias de aplicações hospedadas em nuvem pública (ambientes controlados ou de clientes homologados), garantindo tecnicamente que as ferramentas do contêiner fiquem completamente blindadas e incapazes de interagir, expor ou interferir com qualquer outro dispositivo da sua rede local.
-    
-## 📐 Engenharia, Soluções Técnológicas  & Consultorias.
-
-A robustez e a rigidez aplicadas ao desenvolvimento do ecossistema de software originam-se diretamente das melhores práticas de gerenciamento de riscos e conformidades também existentes na engenharia tradicional. A unificação desses mundos garante a entrega de ativos de alta previsibilidade , rastreabilidade e segurança.
-
-* **🏢 Consultoria em Engenharia Civil:** Cálculo estrutural, Gestão de projetos e Consultorias Técnicas.
-* **⚖️ Conformidade e Normatização:** Mapeamento de processos operacionais e auditorias de segurança, ISOs e Normas técnicas.
-* **📚 Gestão do Conhecimento:** Arquitetura de informação estratégica baseada na ontologia Cortex (PARA-like) estruturada para aprendizado contínuo de sistemas e equipes apoiados por Inteligencias Artificiais.
+```text
+Pentest_Workspace/
+├── 00_COMMAND_CENTER/      # Orquestração, automação e scripts centrais
+│   ├── filter_and_export.sh
+│   ├── kali_audit.sh
+│   ├── 01_LLM_ORCHESTRATOR/
+│   ├── 02_STRATEGY_DECISIONS/
+│   ├── 03_SECURE_VAULT/
+│   └── ARENA/
+│       ├── CANDIDATES/
+│       ├── SCORING/
+│       └── TEST_CASES/
+├── BLUE_TEAM/              # Defesa: hardening, logging, análise, remediação, IA defensiva
+│   ├── 01_HARDENING/
+│   ├── 02_LOGGING/
+│   ├── 03_ANALYSIS/
+│   ├── 04_REMEDIATION/
+│   ├── 05_AI_DEFENSE/
+│   │   └── rule_01_prohibit_listing.md
+│   └── README.md
+├── RED_TEAM/               # Ofensiva: OSINT, payloads, exploração, POC, IA ofensiva
+│   ├── 01_RECON_OSINT/
+│   ├── 02_PAYLOADS/
+│   │   └── check.txt
+│   ├── 03_EXPLOITATION/
+│   ├── 04_REPORTING_POC/
+│   ├── 05_AI_RED_TEAMING/
+│   │   └── prompt_injection_v1.txt
+│   └── README.md
+├── SHARED/                 # Recursos compartilhados (assets, wordlists, base de conhecimento)
+│   ├── 01_ASSETS/
+│   ├── 02_WORDLISTS/
+│   ├── 03_KNOWLEDGE_BASE/
+│   └── README.md
+├── bottom_x86_64-unknown-linux-gnu/ # Binário e autocompletar do Bottom (btm)
+│   ├── btm
+│   └── completion/
+│       ├── _btm, btm.bash, btm.elv, btm.fish, btm.nu, _btm.ps1, btm.ts
+├── config/                 # Configuração do container e shell
+│   ├── Dockerfile
+│   ├── motd.sh
+│   └── zshrc
+├── scripts/                # Scripts de automação do ambiente
+│   ├── kali-run.sh
+│   └── setup.sh
+├── seccomp/                # Perfil seccomp customizado
+│   └── pentest-seccomp.json
+├── wordlists/              # Wordlists persistentes
+│   ├── README.txt
+│   └── rockyou.txt
+├── results/                # Resultados e histórico do shell
+│   └── .zsh_history
+├── DISTRIBUTION/           # Distribuição de artefatos (OPEN_CORE, PRO_PRIVATE)
+│   ├── OPEN_CORE/
+│   │   └── check.txt
+│   └── PRO_PRIVATE/
+├── EXPORTED_TO_HOST/       # Exportação de arquivos do container para o host
+├── files/                  # Área livre para arquivos temporários
+├── .dockerignore
+├── README.md
+├── kali_container_architecture.svg
+```
 
 ---
 
-## ⚙️ Governança Automatizada do Workspace (Strict Fail-Fast Mode)
+## 4. Componentes-Chave
 
-A integridade estrutural, a rastreabilidade e a confiabilidade de todos os artefatos (código, documentações técnicas e contratos) são asseguradas por uma esteira de governança automatizada. Operando sob a filosofia **Fail-Fast**, qualquer inconformidade bloqueia imediatamente o pipeline de integração local (Git Hooks) ou remoto (CI), impedindo a propagação de débitos técnicos.
-
-### 🛠️ Pilares da Validação Estrita
-
-* **🔴 Validação Terminológica Ubíqua (`check_vocabulary.py`):** Varredura estática de semântica que audita o repositório contra um dicionário poliglota próprio (atualmente na v0.4.0, cobrindo 66 conceitos fundamentais em PT-BR, EN e com infraestrutura pronta para expansão em FR). Isso garante a consistência terminológica absoluta entre os domínios de software e engenharia, eliminando ambiguidades conceituais.
-
-* **🔴 Conformidade de Metadados e Esquemas (`validate_frontmatter.py`):**
-  Auditoria rigorosa de cabeçalhos (Frontmatter YAML) contidos nos documentos Markdown. O validador utiliza a especificação internacional **JSON Schema Draft 2020-12** para impor tipagem estrita, campos obrigatórios de governança (como ciclo de vida, autoria e setor) e formatos canônicos, bloqueando dados corrompidos na origem.
-
-* **🔴 Governança de Contratos de API (Linter Spectral):**
-  Validação automatizada de especificações de interface orientadas a eventos e REST (OpenAPI e AsyncAPI) através do motor de regras customizado do Spectral. O processo garante que toda comunicação entre microsserviços do ecossistema respeite padrões estritos de segurança, design e compatibilidade retroativa, garantindo que as versões antigas do sistema não quebrem.
-
-* **🔴 Histórico Imutável e Rastreabilidade (Linear Git History):**
-  Aplicação de políticas corporativas estritas de versionamento para garantir uma trilha de auditoria limpa e auditável:
-  * **Branches Protegidas:** Proibição de escrita direta na ramificação principal (`main`), tornando obrigatória a abertura de requisições de incorporação (Pull Requests).
-  * **Conversation Resolution:** Bloqueio de merges caso haja revisões abertas ou apontamentos de segurança pendentes de marcação formal como resolvidos.
-  * **Histórico estritamente Linear:** Enforcement de políticas que impedem commits de merge redundantes e vetam a utilização de `force-push` (reescrita de histórico), assegurando a total imutabilidade cronológica do código.
+- **config/Dockerfile:** Imagem base Kali, hardening, entrypoint seguro, validação de hash, user não-root.
+- **scripts/kali-run.sh:** Build, execução, shell, limpeza, scan, logging detalhado, validação GPG.
+- **scripts/setup.sh:** Prepara ambiente, permissões, wordlists, backup, hardening do host.
+- **seccomp/pentest-seccomp.json:** Perfil restritivo de syscalls, integração AppArmor.
+- **config/zshrc:** Shell seguro, aliases, funções de forense, alerta root, integração blue team.
+- **bottom_x86_64-unknown-linux-gnu/:** Binário btm e autocompletar para múltiplos shells.
+- **results/, wordlists/:** Volumes persistentes, histórico protegido, wordlists de exemplo.
+- **DISTRIBUTION/, EXPORTED_TO_HOST/, files/:** Suporte a distribuição, exportação e arquivos temporários.
 
 ---
 
-## 📬 Contatos & Parcerias
+## 5. Como Usar
 
-Se você busca uma infraestrutura soberana para IA local, quer acompanhar o desenvolvimento de outros projetos, estudos e contribuições ou necessita de consultoria em engenharia civil, para o desenvolvimento de soluções tecnológicas e governança de processos:
+1. **Preparar ambiente:**
 
-* 📧 **E-mail.:** `nasaladonerd@gmail.com`
-* 🤖 **Código Aberto:** Explore a organização e controle estrutural do ecossistema no repositório `nasaladonerd-web/felipe`.
+  ```sh
+  ./scripts/setup.sh
+  ```
+
+2. **Buildar imagem Docker:**
+
+  ```sh
+  ./scripts/kali-run.sh --build
+  ```
+
+3. **Executar container:**
+
+  ```sh
+  ./scripts/kali-run.sh --run
+  ```
+
+4. **Acessar shell do container:**
+
+  ```sh
+  ./scripts/kali-run.sh --shell
+  ```
+
+5. **Limpar container parado:**
+
+  ```sh
+  ./scripts/kali-run.sh --clean
+  ```
+
+---
+
+## 6. Segurança, Governança e Boas Práticas
+
+- Hardening: rootfs read-only, seccomp, AppArmor, userns-remap, capabilities mínimas.
+- Logging seguro, histórico protegido, validação de hash, backup automático.
+- Integração blue/red team, automação, IA, scripts de defesa e ataque.
+- Documentação institucional, threat modeling, fluxo de atualização segura.
+- Políticas institucionais em `02_DOCUMENTACAO/` e `03_ARTIFACTS/`.
+
+---
+
+## 7. Referências e Suporte
+
+- Consulte o owner técnico para dúvidas ou melhorias.
+- Para contribuições, siga as normas de commit e documentação do workspace.
+
+---
+├── RED_TEAM/               # Materiais, scripts e payloads ofensivos
+│   ├── 01_RECON_OSINT/
+│   ├── 02_PAYLOADS/
+│   │   └── check.txt
+│   ├── 03_EXPLOITATION/
+│   ├── 04_REPORTING_POC/
+│   ├── 05_AI_RED_TEAMING/
+│   │   └── prompt_injection_v1.txt
+│   └── README.md
+├── SHARED/                 # Recursos compartilhados (assets, wordlists, base de conhecimento)
+│   ├── 01_ASSETS/
+│   ├── 02_WORDLISTS/
+│   ├── 03_KNOWLEDGE_BASE/
+│   └── README.md
+├── bottom_x86_64-unknown-linux-gnu/ # Binário e scripts de autocompletar do Bottom (btm)
+
+## 7. Referências e Suporte
+
+- Consulte o owner técnico para dúvidas ou melhorias.
+- Para contribuições, siga as normas de commit e documentação do workspace.
+│   └── setup.sh
+├── seccomp
+│   └── pentest-seccomp.json
+├── SHARED
+│   ├── 01_ASSETS
+│   ├── 02_WORDLISTS
+│   ├── 03_KNOWLEDGE_BASE
+│   └── README.md
+└── wordlists
+    ├── README.txt
+    └── rockyou.txt
+
+37 directories, 29 files
+
+```text
+## Primeiro uso
+
+```bash
+# 1. Setup do host (uma única vez)
+sudo ./scripts/setup.sh
+
+# 2. Iniciar container
+sudo ./scripts/kali-run.sh --external    # Para alvos externos
+sudo ./scripts/kali-run.sh --internal    # Para rede local / host Ubuntu
+```text
+
+## Melhorias aplicadas vs. comando original
+
+| Aspecto         | Antes                         | Depois                                |
+|-----------------|-------------------------------|---------------------------------------|
+| Rede            | `--net=host` (sem isolamento) | Bridge/macvlan dedicada por modo      |
+| Capabilities    | Só `NET_ADMIN`                | Set completo para pentest             |
+| Root filesystem | Read/write total              | `--read-only` + tmpfs                 |
+| Recursos        | Ilimitado                     | CPU/RAM/PIDs limitados                |
+| Seccomp         | Default Docker                | Perfil customizado para pentest       |
+| AppArmor        | Default Docker                | Perfil dedicado `docker-kali-pentest` |
+| User namespace  | Root real no host             | `userns-remap=default`                |
+| Persistência    | Nenhuma                       | Volumes organizados                   |
+| Logging         | Default                       | Limitado (10MB, 3 rotações)           |
+| Histórico       | Shell padrão                  | Log de sessão por alvo                |
+
+## Modos de rede
+
+### `--external` (padrão)
+
+### `--internal`
+
+## Segurança
+
+## Ferramentas incluídas
+
+## Aliases úteis
+
+```bash
+nmap-fast        # Scan rápido de portas
+nmap-stealth     # Scan silencioso (-T2 + fragmentação)
+nmap-vuln        # Scripts de vulnerabilidade
+gobuster-dir     # Enumeração de diretórios web
+pentest-start    # Inicia sessão com log automático
+recon <alvo>     # Reconhecimento básico completo
+```text
+
+## Dicas de OpSec
