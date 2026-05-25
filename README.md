@@ -1,179 +1,98 @@
-<!-- markdownlint-disable MD033 MD041 MD045 MD042 -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0077B5&height=120&section=header&text=Bem-vindo%20ao%20meu%20GitHub!&fontAlign=50&fontAlignY=40&fontSize=40&desc=Engenharia%20%7C%20Python%20%7C%20Projetos&descAlign=50&descAlignY=70" width="100%" alt="Banner de boas-vindas"/>
+# 🏢 Quem sou eu?
 
-# 👋 Olá! Eu sou Eng. Felipe da Silva Machado
+> **Civil Engineer**  & **Software Engineer**|
 
-## ✨ Sobre mim
+## ⚡ Projeto Ecossistema Synergie
 
-Sou apaixonado por engenharia, tecnologia e inovação. Minha missão é transformar desafios em soluções práticas, inteligentes e eficientes, conectando o universo da construção civil ao poder da automação e da análise de dados.
+O **Synergie** é um projeto de construção de um ecossistema de workspaces, concebidos sob o princípios de soberania tecnológica, automaçãos **fail-fast** e **isolamento** adequado. Dividido em duas frentes complementares, o ecossistema atende tanto à engenharia analítica de dados quanto à auditoria defensiva e ofensiva de infraestruturas críticas.
 
-Atuo com foco em resultado, previsibilidade de custo e qualidade técnica, apoiando empresas e clientes na tomada de decisão com processos mais organizados e dados confiáveis.
-
-### Engenheiro Civil | Desenvolvedor Python | Gestor de Projetos
-
-Engenheiro Civil com experiência em gestão de projetos focada no tripé **tempo, custo e qualidade**. Atuo na interseção entre engenharia e tecnologia, desenvolvendo soluções em Python para automação de processos, controle de obras e inteligência artificial aplicada à construção civil.
-
----
-
-## 🏗️ Áreas de Atuação
-
-### Engenharia Civil
-
-- Gestão e execução de obras residenciais, comerciais e industriais
-- Planejamento e controle de cronograma físico-financeiro
-- Orçamentação com base SINAPI/SICRO e composições próprias
-- Elaboração de laudos técnicos e pareceres de engenharia
-- Diário de obra, medições e boletins de faturamento
-
-### Consultorias e Certificações
-
-- Implementação de **ISO 9001** - Sistemas de Gestão da Qualidade
-- Implementação de **PBQP-H** - Programa Brasileiro da Qualidade e Produtividade do Habitat
-- Adequação de processos construtivos às normas ABNT NBR
-- Auditorias internas e preparação para certificação
-
-### Desenvolvimento Python
-
-- Automação de rotinas de engenharia (medições, relatórios, orçamentos)
-- Processamento de planilhas e geração de documentos (PDF, Excel, Word)
-- Scripts de controle tecnológico do concreto conforme NBR 12655
-- Dashboards e ferramentas de acompanhamento de obras
-- Inteligência Artificial aplicada à engenharia civil
+<table border="0" width="100%">
+  <tr>
+    <td width="50%" valign="top" style="border: none; padding-right: 15px;">
+      <h3>🤖 Synergie Core (Open-Core)</h3>
+      <p>Workspace de engenharia totalmente apoiado por assistentes inteligentes locais e orquestração multi-LLM independente da nuvem.</p>
+      <ul>
+        <li><b>IA 100% Local:</b> Modelos executados via Ollama/llama.cpp com logs agregados e dashboards dedicados.</li>
+        <li><b>Ensemble de Modelos:</b> Orquestração inteligente com tomada de decisão baseada em voto conceitual mitigando alucinações.</li>
+        <li><b>Governança Ativa:</b> Validação automática de schemas e metadados sob modo estrito e impeditivo <i>fail-fast</i>.</li>
+      </ul>
+      <br>
+      <p>➔ <code>Foco: Produtividade, privacidade absoluta e conformidade corporativa.</code></p>
+    </td>    
+    <td width="50%" valign="top" style="border: none; padding-left: 15px;">
+<h3>🛡️ Synergie Security Edition (Premium)</h3>
+      <p>Ambiente isolado sob demanda para auditoria ofensiva e Pentesting profissional, estruturado sobre contêineres Kali Linux de alta confiabilidade.</p>
+      <ul>
+        <li><b>Isolamento Avançado:</b> Proteção de infraestrutura baseada em <code>userns-remap</code>, perfis AppArmor e filtros via Seccomp.</li>
+        <li><b>Execução Imutável:</b> Contêiner operando com <code>rootfs</code> read-only, mitigação <code>--cap-drop=ALL</code> e limites estritos (4G RAM / 512 PIDs).</li>
+        <li><b>Segregação de Redes:</b> Modos de rede customizados para Pentest interno (LAN via macvlan) ou alvos externos isolados do host.</li>
+      </ul>
+      <br>
+      <p>➔ <code>Foco: Auditorias comerciais de segurança e laboratórios temporários de cybersecurity.</code></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas
+## 🛠️ Arquitetura de Isolamento e Segurança (Security Edition)
 
-```text
-Linguagens:      Python • SQL • HTML/CSS
-Bibliotecas:     pandas • openpyxl • reportlab • matplotlib • requests
-Frameworks:      FastAPI • Streamlit
-Eng. Civil:      AutoCAD • MS Project • Excel Avançado
-Normas:          ABNT NBR • ISO 9001 • ISO 14001 • ISO 45001 • PBQP-H
-Idiomas:         Português (nativo) • Français (intermédiaire) • English (basic)
-```
+Para mitigar os riscos inerentes à execução de ferramentas hiper-agressivas de auditoria e exploração (como `nmap`, `metasploit-framework` e `hydra`), a infraestrutura do ecossistema opera sob o princípio de **Defesa em Profundidade**. O ambiente de execução do Kali Linux é envelopado por quatro camadas concêntricas de isolamento que blindam completamente o sistema hospedeiro (*Host*) contra qualquer vazamento de execução ou tentativa de elevação de privilégio:
 
----
+### 🛡️ As 4 Camadas de Blindagem do Host
 
-## 📂 Projetos em Destaque
-
-| Projeto | Descrição | Tecnologias |
-|---|---|---|
-| [🧮 Automação de Medições](#) | Sistema de processamento de boletins de medição com validação contratual e geração de PDF | Python, openpyxl, reportlab |
-| [🏗️ Controle Tecnológico do Concreto](#) | Análise estatística de ensaios de compressão conforme NBR 12655 e NBR 5739 | Python, pandas, matplotlib |
-| [📊 Monitor de Cronograma](#) | Acompanhamento físico-financeiro com curva S e alertas de desvio | Python, Streamlit |
-| [📋 Gerador de Diário de Obra](#) | Automação de diário de obra com registro de clima, efetivo e ocorrências | Python, python-docx, PyPDF2 |
-| [📧 Automação de Relatórios](#) | Envio automatizado de relatórios gerenciais para fiscalização e diretoria | Python, smtplib, schedule |
-
-> 📌 *Repositórios em construção - novos projetos sendo publicados regularmente.*
->
-> 🚀 *Início de jornada — projetos práticos e evolução contínua.*
-
----
-
-## 📜 Serviços Profissionais
-
-### O que posso fazer por você ou sua empresa
-
-#### Engenharia Civil
-
-- ✅ Gestão completa de obras (planejamento -> execução -> entrega)
-- ✅ Orçamentos detalhados com BDI e composições SINAPI/SICRO
-- ✅ Laudos técnicos, vistorias e pareceres
-- ✅ Acompanhamento de cronograma e controle de custos
-
-#### Consultorias
-
-- ✅ Implantação ISO 9001:2015 - do diagnóstico à certificação
-- ✅ Implantação PBQP-H - adequação de processos e documentação
-- ✅ Treinamentos internos em qualidade e boas práticas construtivas
-
-#### Desenvolvimento e Automação
-
-- ✅ Scripts Python sob medida para rotinas de engenharia
-- ✅ Automação de planilhas, relatórios e documentos técnicos
-- ✅ Dashboards de acompanhamento de obras
-- ✅ Integração de dados e geração automatizada de entregas
-
----
-
-## 📄 Currículo e Portfólio
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Currículo-Em%20construção-6c757d?style=for-the-badge&logo=readthedocs&logoColor=white" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Portfólio-Em%20construção-6c757d?style=for-the-badge&logo=github&logoColor=white" />
-</div>
-
----
-
-## 📈 GitHub Stats
-
-<div align="center">
-
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=nasaladonerd-web&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
-  &nbsp;&nbsp;
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nasaladonerd-web&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-
-  <br/><br/>
-
-  <img width="600" src="https://github-readme-streak-stats.herokuapp.com/?user=nasaladonerd-web&theme=tokyonight&hide_border=true" />
-
-  <br/><br/>
-
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=nasaladonerd-web&theme=tokyo-night&hide_border=true&area=true" width="90%" />
-
-</div>
-
----
-
-## 🏆 Troféus
+1. **Camada de Identidade (`userns-remap`):** O usuário `root` dentro do contêiner é mapeado para um usuário comum e sem privilégios no Host. Mesmo se um exploit quebrar o contêiner, o atacante ganha acesso ao seu computador real como um usuário totalmente inofensivo.
+2. **Camada de Restrição do Kernel (`Seccomp` & `AppArmor`):** Filtros rígidos de chamadas de sistema (`Seccomp`) barram syscalls perigosas, enquanto o perfil do `AppArmor` confina os processos do contêiner, impedindo que acessem arquivos ou diretórios sensíveis do Host.
+3. **Camada de Imutabilidade Estrita (`rootfs` read-only):** Todo o sistema de arquivos do Kali opera em modo somente-leitura. Malwares e payloads não conseguem se fixar ou modificar os binários do sistema, garantindo um ambiente estéril e livre de persistência maliciosa a cada execução.
+4. **Camada de Contenção Física (Limites de Hardware):** Tetos rígidos de memória (4G RAM) e tabela de processos (`512 PIDs`) neutralizam ataques de Negação de Serviço (DoS) e scripts recursivos (como *Fork Bombs*), mantendo o Host perfeitamente estável.
 
 <p align="center">
-  <img src="https://github-trophies.vercel.app/?username=nasaladonerd-web&theme=tokyonight&no-frame=true&column=7&margin-w=10" alt="Troféus GitHub" />
+  <img src="https://raw.githubusercontent.com/nasaladonerd-web/nasaladonerd-web/main/kali_container_architecture.svg" alt="Synergie Pentest Architecture" width="100%" style="max-width:750px;">
 </p>
 
----
+## 🌐 Políticas de Segregação de Rede Dinâmica
 
-## 🤝 Disponibilidade
+O gerenciamento de conexões do workspace é projetado sob critérios rígidos de auditoria autorizada e contenção de tráfego, permitindo o chaveamento seguro entre dois modos de rede isolados, conforme o escopo e os termos de consentimento da homologação técnica:
 
-- Aberto a oportunidades como Engenheiro Civil, Gestor de Projetos e Desenvolvedor Python.
-- Disponível para consultorias em qualidade (ISO 9001 e PBQP-H) e automação de rotinas de engenharia.
-- Interesse em projetos de inovação, dados e IA aplicada à construção civil.
+- Modo --internal (Avaliação de Perímetro Interno / LAN): Utiliza drivers macvlan para associar um endereço IP dedicado da sub-rede local ao contêiner. Esta configuração é estritamente voltada para testes de conformidade, inventário de ativos e análise de vulnerabilidades em topologias internas (como switches, roteadores e servidores locais corporativos), operando com total transparência de tráfego para os sistemas de monitoramento da TI.
 
----
+- Modo --external (Simulação de Vetores Externos / Cloud): Conecta o contêiner a uma interface de ponte (bridge) isolada, utilizando mascaramento de rede (NAT) e políticas restritivas no firewall iptables do Host. Este modo é desenhado para auditorias de aplicações hospedadas em nuvem pública (ambientes controlados ou de clientes homologados), garantindo tecnicamente que as ferramentas do contêiner fiquem completamente blindadas e incapazes de interagir, expor ou interferir com qualquer outro dispositivo da sua rede local.
+    
+## 📐 Engenharia, Soluções Técnológicas  & Consultorias.
 
-## 📫 Contato
+A robustez e a rigidez aplicadas ao desenvolvimento do ecossistema de software originam-se diretamente das melhores práticas de gerenciamento de riscos e conformidades também existentes na engenharia tradicional. A unificação desses mundos garante a entrega de ativos de alta previsibilidade , rastreabilidade e segurança.
 
-<div align="center">
-
-  <a href="https://www.linkedin.com/in/nasaladonerd-web"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  &nbsp;
-  <a href="mailto:nasaladonerd@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  &nbsp;
-  <a href="https://wa.me/5521981648002"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
-  &nbsp;
-  <a href="https://github.com/nasaladonerd-web"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-
-  <br/><br/>
-
-  📍 **Rio de Janeiro - RJ, Brasil** &nbsp;|&nbsp; 📞 **(21) 98164-8002** &nbsp;|&nbsp; 📧 **<nasaladonerd@gmail.com>**
-
-  <br/>
-
-  <i>💬 Aberto a projetos, parcerias e oportunidades profissionais.<br/>
-  Vamos construir algo juntos! 🚀</i>
-
-</div>
+* **🏢 Consultoria em Engenharia Civil:** Cálculo estrutural, Gestão de projetos e Consultorias Técnicas.
+* **⚖️ Conformidade e Normatização:** Mapeamento de processos operacionais e auditorias de segurança, ISOs e Normas técnicas.
+* **📚 Gestão do Conhecimento:** Arquitetura de informação estratégica baseada na ontologia Cortex (PARA-like) estruturada para aprendizado contínuo de sistemas e equipes apoiados por Inteligencias Artificiais.
 
 ---
 
-<div align="center">
+## ⚙️ Governança Automatizada do Workspace (Strict Fail-Fast Mode)
 
-  <img src="https://komarev.com/ghpvc/?username=nasaladonerd-web&color=0077B5&style=for-the-badge&label=VISITAS+AO+PERFIL" alt="Profile views" />
+A integridade estrutural, a rastreabilidade e a confiabilidade de todos os artefatos (código, documentações técnicas e contratos) são asseguradas por uma esteira de governança automatizada. Operando sob a filosofia **Fail-Fast**, qualquer inconformidade bloqueia imediatamente o pipeline de integração local (Git Hooks) ou remoto (CI), impedindo a propagação de débitos técnicos.
 
-  <br/><br/>
+### 🛠️ Pilares da Validação Estrita
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0077B5&height=80&section=footer" width="100%" />
+* **🔴 Validação Terminológica Ubíqua (`check_vocabulary.py`):** Varredura estática de semântica que audita o repositório contra um dicionário poliglota próprio (atualmente na v0.4.0, cobrindo 66 conceitos fundamentais em PT-BR, EN e com infraestrutura pronta para expansão em FR). Isso garante a consistência terminológica absoluta entre os domínios de software e engenharia, eliminando ambiguidades conceituais.
 
-</div>
+* **🔴 Conformidade de Metadados e Esquemas (`validate_frontmatter.py`):**
+  Auditoria rigorosa de cabeçalhos (Frontmatter YAML) contidos nos documentos Markdown. O validador utiliza a especificação internacional **JSON Schema Draft 2020-12** para impor tipagem estrita, campos obrigatórios de governança (como ciclo de vida, autoria e setor) e formatos canônicos, bloqueando dados corrompidos na origem.
+
+* **🔴 Governança de Contratos de API (Linter Spectral):**
+  Validação automatizada de especificações de interface orientadas a eventos e REST (OpenAPI e AsyncAPI) através do motor de regras customizado do Spectral. O processo garante que toda comunicação entre microsserviços do ecossistema respeite padrões estritos de segurança, design e compatibilidade retroativa, garantindo que as versões antigas do sistema não quebrem.
+
+* **🔴 Histórico Imutável e Rastreabilidade (Linear Git History):**
+  Aplicação de políticas corporativas estritas de versionamento para garantir uma trilha de auditoria limpa e auditável:
+  * **Branches Protegidas:** Proibição de escrita direta na ramificação principal (`main`), tornando obrigatória a abertura de requisições de incorporação (Pull Requests).
+  * **Conversation Resolution:** Bloqueio de merges caso haja revisões abertas ou apontamentos de segurança pendentes de marcação formal como resolvidos.
+  * **Histórico estritamente Linear:** Enforcement de políticas que impedem commits de merge redundantes e vetam a utilização de `force-push` (reescrita de histórico), assegurando a total imutabilidade cronológica do código.
+
+---
+
+## 📬 Contatos & Parcerias
+
+Se você busca uma infraestrutura soberana para IA local, quer acompanhar o desenvolvimento de outros projetos, estudos e contribuições ou necessita de consultoria em engenharia civil, para o desenvolvimento de soluções tecnológicas e governança de processos:
+
+* 📧 **E-mail.:** `nasaladonerd@gmail.com`
+* 🤖 **Código Aberto:** Explore a organização e controle estrutural do ecossistema no repositório `nasaladonerd-web/felipe`.
