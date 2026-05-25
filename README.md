@@ -41,14 +41,39 @@ Para mitigar os riscos inerentes à execução de ferramentas hiper-agressivas d
 ### 🛡️ As 4 Camadas de Blindagem do Host
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/nasaladonerd-web/nasaladonerd-web/main/kali_container_architecture.svg" alt="Synergie Securyt" width="50%" style="max-width:750px;">
+  <img src="https://raw.githubusercontent.com/nasaladonerd-web/nasaladonerd-web/main/arquitetura.png" alt="Synergie Pentest Architecture" width="100%" style="max-width:750px;">
 </p>
 
-1. **Camada de Identidade (`userns-remap`):** O usuário `root` dentro do contêiner é mapeado para um usuário comum e sem privilégios no Host. Mesmo se um exploit quebrar o contêiner, o atacante ganha acesso ao seu computador real como um usuário totalmente inofensivo.
-2. **Camada de Restrição do Kernel (`Seccomp` & `AppArmor`):** Filtros rígidos de chamadas de sistema (`Seccomp`) barram syscalls perigosas, enquanto o perfil do `AppArmor` confina os processos do contêiner, impedindo que acessem arquivos ou diretórios sensíveis do Host.
-3. **Camada de Imutabilidade Estrita (`rootfs` read-only):** Todo o sistema de arquivos do Kali opera em modo somente-leitura. Malwares e payloads não conseguem se fixar ou modificar os binários do sistema, garantindo um ambiente estéril e livre de persistência maliciosa a cada execução.
-4. **Camada de Contenção Física (Limites de Hardware):** Tetos rígidos de memória (RAM) e tabela de processos (`PIDs`) neutralizam ataques de Negação de Serviço (DoS) e scripts recursivos (*Fork Bombs*), mantendo o Host perfeitamente estável.
+### 🎨 Legenda de Cores da Infraestrutura
 
+* 🔵 **Zona Azul (Segurança do Host):** Camadas de controle de Kernel, identidades e firewalls do Ubuntu Host.
+* 🟢 **Zona Verde (Segurança de Rede):** Isolamento lógico de perímetros, sub-redes e fluxos de tráfego dinâmicos.
+* 🟠 **Zona Laranja (Contenção do Contêiner):** Imutabilidade de arquivos, restrição de privilégios e limites físicos do Kali Linux.
+
+---
+
+### 🔬 Detalhamento das Camadas de Blindagem
+
+#### 🔵 1. Segurança do Host e Governança (Zonas Azuis)
+Esta zona no topo do diagrama centraliza os mecanismos de defesa nativos do Kernel do Ubuntu Host e as validações que confinam a execução antes mesmo que ela chegue ao contêiner:
+* **Controle de Identidade (`userns-remap`):** Mapeia o usuário `root` de dentro do contêiner para um usuário comum e sem privilégios no Host. Mesmo se um exploit quebrar o isolamento do contêiner, o atacante ganhará acesso ao computador real apenas como um usuário inofensivo.
+* **Restrição do Kernel (`Seccomp` & `AppArmor`):** O `Seccomp` atua filtrando chamadas de sistema e bloqueando syscalls perigosas ao Kernel do Ubuntu. Simultaneamente, o `AppArmor` confina o escopo dos processos, proibindo acessos a arquivos ou diretórios sensíveis do sistema hospedeiro.
+* **Políticas de Firewall (`iptables`):** Gerencia as regras de tráfego que entram e saem do Host, aplicando bloqueios estritos para comunicações não autorizadas.
+* **Validador Automatizado Terminológico:** Destacado com borda brilhante e escudo protetor por ser o cérebro da política *fail-fast*. Suas setas de fluxo roxas demonstram que ele intercepta, audita e valida a integridade antes de autorizar os modos de execução de rede.
+
+#### 🟢 2. Rede de Ponte e Segregação Dinâmica (Zonas Verdes)
+A zona central do diagrama atua como um "colchão de ar" de rede, garantindo isolamento absoluto de tráfego através de políticas mutuamente exclusivas e mapeadas conforme o escopo homologado:
+* **Modo `--internal` (Avaliação de Perímetro LAN):** Utiliza drivers `macvlan` para associar um endereço IP real da sub-rede local ao contêiner, voltado estritamente para testes de conformidade interna de forma transparente para os sistemas de monitoramento da TI.
+* **Modo `--external` (Simulação de Vetores Cloud):** Conecta o contêiner a uma interface de ponte (`bridge`) isolada com mascaramento de rede (NAT) e regras restritivas no `iptables`. Permite auditar alvos na nuvem pública de forma segura, garantindo tecnicamente que as ferramentas fiquem incapazes de interagir, expor ou interferir com os dispositivos da sua rede local.
+
+#### 🟠 3. Workspace Pentest e Contenção Física (Zonas Laranjas)
+A base do diagrama representa a "zona quente" onde as ferramentas agressivas de cibersegurança operam dentro do Kali Linux de forma totalmente enjaulada e controlada:
+* **Remoção de Privilégios (`cap-drop=ALL`):** Castra os poderes tradicionais do usuário administrador dentro do contêiner, permitindo de volta apenas capacidades de rede estritamente necessárias (`NET_RAW` e `NET_ADMIN`) para as varreduras legítimas.
+* **Imutabilidade Estrita (`rootfs` Read-Only):** Posicionado na base do bloco para demonstrar que todo o sistema de arquivos base do Kali opera em modo somente-leitura. Malwares e payloads não conseguem se fixar ou modificar binários, garantindo um ambiente estéril e livre de persistência a cada nova inicialização.
+* **Gestão de Memória e Volumes (`tmpfs`, `results`, `wordlists`):** Arquivos temporários rodam diretamente na memória RAM (`tmpfs`), relatórios e logs são exportados de forma persistente e isolada (`results`) e os dicionários de ataque são montados como apenas leitura (`wordlists`).
+* **Contenção Física (Limites de Hardware):** Tetos rígidos de memória (4G RAM) e limitação estrita na tabela de processos (512 PIDs) neutralizam ataques de Negação de Serviço (DoS) e scripts recursivos maliciosos (*Fork Bombs*), preservando a estabilidade total do computador Host.
+
+---
 ### 🌐 Políticas de Segregação de Rede Dinâmica
 
 O gerenciamento de conexões do workspace é projetado sob critérios rígidos de **auditoria autorizada** e contenção de tráfego, permitindo o chaveamento seguro entre dois modos de rede isolados, conforme o escopo e os termos de consentimento da homologação técnica:
