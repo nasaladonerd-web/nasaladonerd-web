@@ -86,7 +86,7 @@ Para mitigar os riscos inerentes à execução de ferramentas hiper-agressivas d
 ### 🛡️ As 4 Camadas de Blindagem do Host
 
 <p align="center">
-  <img src="Arquitetura.png" alt="Synergie Security Architecture" width="100%" style="max-width:750px;">
+  <img src="Arquitetura.png" alt="Synergie Security Architecture" width="80%" style="max-width:750px;">
 </p>
 
 ### 🎨 Legenda de Cores da Infraestrutura
