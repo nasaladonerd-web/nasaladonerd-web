@@ -1,10 +1,11 @@
-# 🏢 Felipe da Silva Machado
-> Consultorias | Inteligencia Artificial | Soluções Téclológicas.
----
+## Quem sou eu?
+ > Felipe Machado, Engenheiro Civil, Epecialista em Fundações e Estruturas multidisciplinares.
+ > Atualmente atuo no desenvolvmento e estudos de sitemas geridos por Inteligência artificial.
+ > Apaixonado por Tecnologia, matemática, Engenharia e Lingua Francesa.
 
 ## ⚡ Ecossistema Synergie
 
-O Projeto **Synergie** é um projeto para o desenvolvimento de um ecossistema de workspaces concebido sob o princípio de soberania tecnológica, automação fail-fast e isolamento criptográfico. Dividido em duas frentes complementares, o ecossistema atende tanto à engenharia analítica e diária  de desenvolvimento de soluções tecnológicas, quanto à auditoria defensiva e ofensiva de infraestrutura crítica.
+O Projeto **Synergie** é um projeto com o objetivo de implementar e desenvolver um ecossistema de workspaces, concebido sob o princípio de soberania tecnológica, automação fail-fast e isolamento. Dividido em duas frentes complementares, o ecossistema atende tanto à engenharia analítica e diária  de desenvolvimento de soluções tecnológicas, quanto à auditoria defensiva e ofensiva de infraestrutura crítica.
 
 <table border="0" width="100%">
   <tr>
@@ -13,7 +14,7 @@ O Projeto **Synergie** é um projeto para o desenvolvimento de um ecossistema de
       <p>Workspace de engenharia totalmente apoiado por assistentes inteligentes locais e orquestração multi-LLM independente da nuvem.</p>
       <ul>
         <li><b>IA 100% Local:</b> Modelos executados via Ollama/llama.cpp com logs agregados e dashboards dedicados.</li>
-        <li><b>Ensemble de Modelos:</b> Orquestração inteligente com tomada de decisão baseada em voto conceitual mitigando alucinações.</li>
+        <li><b>Cojunto de Modelos:</b> Orquestração inteligente com tomada de decisão baseada em voto conceitual mitigando alucinações.</li>
         <li><b>Governança Ativa:</b> Validação automática de schemas e metadados sob modo estrito e impeditivo <i>fail-fast</i>.</li>
       </ul>
       <br>
@@ -34,7 +35,7 @@ O Projeto **Synergie** é um projeto para o desenvolvimento de um ecossistema de
 
 ---
 
-## 🛠️ Arquitetura de Isolamento e Segurança (Security Edition)
+## 🛠️ Arquitetura de Isolamento e Segurança (Synergie Security)
 
 Para mitigar os riscos inerentes à execução de ferramentas hiper-agressivas de auditoria e exploração (como `nmap`, `metasploit-framework` e `hydra`), a infraestrutura do ecossistema opera sob o princípio de **Defesa em Profundidade**. O ambiente de execução do Kali Linux é envelopado por quatro camadas concêntricas de isolamento que blindam completamente o sistema hospedeiro (*Host*) contra qualquer vazamento de execução ou tentativa de elevação de privilégio:
 
