@@ -107,4 +107,4 @@ A integridade estrutural, a rastreabilidade e a confiabilidade de todos os artef
 ## 📬 Contato & Parcerias & Interesses
 
 * 📧 **E-mail:** `nasaladonerd@gmail.com`
-* 🤖 **Synergie Core** Explore a organização e controle estrutural do ecossistema Synergie Core no repositório público `nasaladonerd-web/felipe/`.
+* 🤖 **Synergie Core** Explore, utilize, estude e contribua com o projeto do projeto Synergie Core no repositório público do projeto `nasaladonerd-web/felipe/Synergie-Core`.
