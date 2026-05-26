@@ -87,7 +87,7 @@ Para mitigar os riscos inerentes à execução de ferramentas hiper-agressivas d
 ### 🛡️ As 4 Camadas de Blindagem do Host
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/nasaladonerd-web/nasaladonerd-web/main/arquitetura.png" alt="Synergie Securyt Architecture" width="100%" style="max-width:750px;">
+  <img [src="https://raw.githubusercontent.com/nasaladonerd-web/nasaladonerd-web/main/arquitetura.png](https://github.com/nasaladonerd-web/nasaladonerd-web/blob/main/Arquitetura.png)" alt="Synergie Securyt Architecture" width="100%" style="max-width:750px;">
 </p>
 
 ### 🎨 Legenda de Cores da Infraestrutura
