@@ -1,5 +1,5 @@
 # 🏢 Felipe da Silva Machado
-> **Civil Engineer** | Consultorias | Inteligencia Artificial | Soluções Téclológicas.
+> Consultorias | Inteligencia Artificial | Soluções Téclológicas.
 ---
 
 ## ⚡ Ecossistema Synergie
