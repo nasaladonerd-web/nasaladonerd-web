@@ -17,8 +17,6 @@ O Projeto **Synergie** é um projeto com o objetivo de implementar e desenvolver
         <li><b>Cojunto de Modelos:</b> Orquestração inteligente com tomada de decisão baseada em voto conceitual mitigando alucinações.</li>
         <li><b>Governança Ativa:</b> Validação automática de schemas e metadados sob modo estrito e impeditivo <i>fail-fast</i>.</li>
       </ul>
-      <br>
-      <br>
       <p>➔ <code>Foco: Produtividade, privacidade absoluta e conformidade corporativa.</code></p>
     </td>    
     <td width="50%" valign="top" style="border: none; padding-left: 15px;">
@@ -29,6 +27,7 @@ O Projeto **Synergie** é um projeto com o objetivo de implementar e desenvolver
         <li><b>Execução Imutável:</b> Contêiner operando com <code>rootfs</code> read-only, mitigação <code>--cap-drop=ALL</code> e limites.</li>
         <li><b>Segregação de Redes:</b> Modos de rede customizados para Pentest interno (LAN via macvlan) ou alvos externos isolados do host.</li>
       </ul>
+    </br>
       <p>➔ <code>Foco: Auditorias comerciais de segurança e laboratórios temporários de cybersecurity.</code></p>
     </td>
 </table>
