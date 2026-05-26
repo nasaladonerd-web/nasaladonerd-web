@@ -41,7 +41,7 @@ Para mitigar os riscos inerentes à execução de ferramentas hiper-agressivas d
 ### 🛡️ As 4 Camadas de Blindagem do Host
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/nasaladonerd-web/nasaladonerd-web/main/arquitetura.png" alt="Synergie Pentest Architecture" width="100%" style="max-width:750px;">
+  <img src="https://raw.githubusercontent.com/nasaladonerd-web/nasaladonerd-web/main/arquitetura.png" alt="Synergie Securyt Architecture" width="100%" style="max-width:750px;">
 </p>
 
 ### 🎨 Legenda de Cores da Infraestrutura
@@ -76,7 +76,7 @@ A base do diagrama representa a "zona quente" onde as ferramentas agressivas de 
 ---
 ### 🌐 Políticas de Segregação de Rede Dinâmica
 
-O gerenciamento de conexões do workspace é projetado sob critérios rígidos de **auditoria autorizada** e contenção de tráfego, permitindo o chaveamento seguro entre dois modos de rede isolados, conforme o escopo e os termos de consentimento da homologação técnica:
+O gerenciamento de conexões do workspace Sinergie Securyt é projetado sob critérios rígidos de **auditoria autorizada** e contenção de tráfego, permitindo o chaveamento seguro entre dois modos de rede isolados, conforme o escopo e os termos de consentimento da homologação técnica:
 
 * **Modo `--internal` (Avaliação de Perímetro Interno / LAN):** Utiliza drivers `macvlan` para associar um endereço IP dedicado da sub-rede local ao contêiner. Esta configuração é estritamente voltada para testes de conformidade, inventário de ativos e análise de vulnerabilidades em topologias internas (como switches, roteadores e servidores locais corporativos), operando com total transparência de tráfego para os sistemas de monitoramento da TI.
 * **Modo `--external` (Simulação de Vetores Externos / Cloud):** Conecta o contêiner a uma interface de ponte (`bridge`) isolada, utilizando mascaramento de rede (NAT) e políticas restritivas no firewall `iptables` do Host. Este modo é desenhado para auditorias de aplicações hospedadas em nuvem pública (ambientes controlados ou de clientes homologados), garantindo tecnicamente que as ferramentas do contêiner fiquem completamente blindadas e incapazes de interagir, expor ou interferir com qualquer outro dispositivo da sua rede local.
@@ -85,27 +85,26 @@ O gerenciamento de conexões do workspace é projetado sob critérios rígidos d
 
 ## 📐 Engenharia Civil, Soluções Inteligentes e Tecnológicas & Consultorias
 
-A robustez e a rigidez aplicadas ao desenvolvimento do ecossistema de softwares originam-se diretamente das melhores práticas de gerenciamento de riscos e conformidade da engenharia tradicional. A unificação desses mundos garante a entrega de ativos de alta previsibilidade, rastreabilidade e qualidae.
+A robustez e a rigidez aplicadas ao desenvolvimento desses ecossistemas de softwares originam-se diretamente das melhores práticas de gerenciamento de riscos e conformidade da engenharia tradicional. A unificação desses mundos garante a entrega de ativos de alta previsibilidade, rastreabilidade e qualidade.
 
 * **🏢 Consultoria em Engenharia Civil:** Gerenciamento, Planejamento, Projetos Estruturais e Consultoria Técnica.
-* **⚖️ Conformidade e Normatização:** Mapeamento de processos operacionais e auditorias de segurança, ISOs e normas técnicas.
-* **📚 Gestão do Conhecimento:** Arquitetura de informação estratégica baseada na ontologia Cortex (PARA-like) estruturada para aprendizado contínuo de sistemas e equipes.
+* **⚖️ Conformidade e Normatização:** Mapeamento de processos operacionais, geração de documentos gerenciais e de auditorias de segurança, ISOs e normas técnicas.
+* **📚 Gestão do Conhecimento:** Arquitetura de informação estratégica baseada na ontologia Cortex (PARA-like) estruturada em redes neurais, para aprendizado, gerenciamento e  contínuidade de sistemas, equipes e projetos.
 
 ---
 
-## ⚙️ Governança Automatizada do Workspace (Strict Fail-Fast Mode)
+## ⚙️ Governança Automatizada dos Workspaces (Strict Fail-Fast Mode)
 
 A integridade estrutural, a rastreabilidade e a confiabilidade de todos os artefatos (código, documentações técnicas e contratos) são asseguradas por uma esteira de governança automatizada. Operando sob a filosofia **Fail-Fast**, qualquer inconformidade bloqueia imediatamente o pipeline de integração local (Git Hooks) ou remoto (CI), impedindo a propagação de débitos técnicos.
 
-* **🔴 Validação Terminológica Ubíqua (`check_vocabulary.py`):** Varredura estática de semântica que audita o repositório contra um dicionário poliglota próprio (v0.4.0, cobrindo 66 conceitos fundamentais em PT-BR, EN e preparado para expansão em FR). Garante a consistência terminológica absoluta entre os domínios de software e engenharia.
-* **🔴 Conformidade de Metadados e Esquemas (`validate_frontmatter.py`):** Auditoria rigorosa de cabeçalhos (Frontmatter YAML) contidos nos documentos Markdown. O validador utiliza a especificação internacional **JSON Schema Draft 2020-12** para impor tipagem estrita e campos obrigatórios de ciclo de vida, autoria e setor.
+* **🔴 Validação Terminológica Ubíqua (`check_vocabulary.py`):** Varredura estática de semântica que audita o repositório contra um dicionário poliglota próprio (v0.4.0, cobrindo 66 conceitos fundamentais em PT-BR, EN e preparaçao para expansão para a lingua em Francesa - FR). 
+* **🔴 Conformidade de Metadados e Esquemas (`validate_frontmatter.py`):** Auditoria rigorosa de cabeçalhos (Frontmatter YAML) contidos nos documentos Markdown. O validador utiliza a especificação internacional **JSON Schema Draft 2020-12** para impor tipagem estrita e campos obrigatórios de ciclo de vida, autoria e ratreabilidade.
 * **🔴 Governança de Contratos de API (Linter Spectral):** Validação automatizada de especificações de interface orientadas a eventos e REST (OpenAPI e AsyncAPI) através do motor de regras do Spectral, garantindo compatibilidade retroativa e design padronizado.
 * **🔴 Histórico Imutável e Rastreabilidade (Linear Git History):** Enforcement de políticas que impedem commits de merge redundantes e vetam a utilização de `force-push`, exigindo branches protegidas e resolução de discussões para total imutabilidade cronológica.
 
 ---
 
-## 📬 Contato & Parcerias 
+## 📬 Contato & Parcerias & Interesses
 
-* 💼 **LinkedIn:** `[Insira seu link do LinkedIn aqui]`
-* 📧 **E-mail:** `[Insira seu e-mail institucional aqui]`
-* 🤖 **Código Aberto:** Explore a organização e controle estrutural do ecossistema no repositório público `nasaladonerd-web/felipe`.
+* 📧 **E-mail:** `nasaladonerd@gmail.com`
+* 🤖 **Synergie Core** Explore a organização e controle estrutural do ecossistema Synergie Core no repositório público `nasaladonerd-web/felipe/`.
