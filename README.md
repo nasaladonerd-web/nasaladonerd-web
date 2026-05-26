@@ -3,9 +3,55 @@
  > Atualmente atuo no desenvolvmento e estudos de sitemas geridos por Inteligência artificial.
  > Apaixonado por Tecnologia, matemática, Engenharia e Lingua Francesa.
 
-## ⚡ Ecossistema Synergie
+## 🏆 Meus Projetos em Desenvolvimento, implementações e Estudos.
+
+- **Synergie Core (Open-Core):** Orquestração multi-LLM, IA 100% local, governança automatizada.
+- **Synergie Security (em Desenvolvimento):** Ambiente Kali Linux containerizado, hardening avançado, automação e logging seguro.
+- **Fine-tuning (em Dsenvolvimento):** Fine-tuning no argente **Hermes3:8b**, com o objetivo de torna-lo um e especialista em Engenharia Civil.
+   
+## 🛠️ Stacks & Skills
+
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+  <!-- Linguagens e Frameworks principais -->
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/Shell-4EAA25?style=flat&logo=gnu-bash&logoColor=white" alt="Shell Script"/>
+  <img src="https://img.shields.io/badge/Markdown-000000?style=flat&logo=markdown&logoColor=white" alt="Markdown"/>
+  <!-- IA, LLM e automação -->
+  <img src="https://img.shields.io/badge/LLM-Ollama/llama.cpp-blue" alt="LLM"/>
+  <img src="https://img.shields.io/badge/LangChain-000000?style=flat&logo=langchain&logoColor=white" alt="LangChain"/>
+  <img src="https://img.shields.io/badge/HuggingFace-FCC624?style=flat&logo=huggingface&logoColor=black" alt="Hugging Face"/>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/Airflow-017CEE?style=flat&logo=apacheairflow&logoColor=white" alt="Apache Airflow"/>
+  <!-- DevOps, Infraestrutura e Observabilidade -->
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white" alt="VS Code"/>
+  <img src="https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white" alt="Grafana"/>
+  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white" alt="Prometheus"/>
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux"/>
+    <img src="https://img.shields.io/badge/Kali-557C94?style=flat&logo=kalilinux&logoColor=white" alt="Kali Linux"/>
+</div>
+
+## ⚡ Ecossistema Synergie 
 
 O Projeto **Synergie** é um projeto com o objetivo de implementar e desenvolver um ecossistema de workspaces, concebido sob o princípio de soberania tecnológica, automação fail-fast e isolamento. Dividido em duas frentes complementares, o ecossistema atende tanto à engenharia analítica e diária  de desenvolvimento de soluções tecnológicas, quanto à auditoria defensiva e ofensiva de infraestrutura crítica.
+
+- **Automação fail-fast:** Scripts institucionais para setup, validação, backup e auditoria, reduzindo erros manuais.
+
+- **Governança ativa:** Enforcement automático de padrões, validação de documentação e código, histórico linear e compliance contínuo.
+
+- **Componentização:** Estrutura modular para reuso de componentes e templates profissionais (README, ADR, AUDIT, RUNBOOK).
+
+- **Observabilidade:** Integração com dashboards e logs para monitoramento técnico (sem exposição de dados sensíveis).
+
+- **Documentação poliglota:** Dicionário institucional PT-BR/EN/FR e templates para padronização e onboarding rápido.
+
+> Todas as práticas seguem princípios de segurança, privacidade e compliance, sem exposição de informações confidenciais ou segredos de negócio.
 
 <table border="0" width="100%">
   <tr>
