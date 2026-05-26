@@ -1,13 +1,13 @@
 ## Quem sou eu?
- > Felipe Machado, Engenheiro Civil, Epecialista em Fundações e Estruturas multidisciplinares.
- > Atualmente atuo no desenvolvmento e estudos de sitemas geridos por Inteligência artificial.
- > Apaixonado por Tecnologia, matemática, Engenharia e Lingua Francesa.
+ > Felipe da Silva Machado, Engenheiro Civil, Epecialista em Fundações e Estruturas multidisciplinares.
+ > Atualmente atuo no desenvolvmento e estudos de sitemas geridos por Inteligência Artificial.
+ > Apaixonado por Tecnologia, Matemática, Engenharia e Lingua Francesa.
 
 ## 🏆 Meus Projetos em Desenvolvimento, implementações e Estudos.
 
-- **Synergie Core (Open-Core):** Orquestração multi-LLM, IA 100% local, governança automatizada.
-- **Synergie Security (em Desenvolvimento):** Ambiente Kali Linux containerizado, hardening avançado, automação e logging seguro.
-- **Fine-tuning (em Dsenvolvimento):** Fine-tuning no argente **Hermes3:8b**, com o objetivo de torna-lo um e especialista em Engenharia Civil.
+- **Synergie Core (Open-Core):** Orquestração multi-LLM, IA 100% local e governança automatizada.
+- **Synergie Security (em Desenvolvimento):** Ambiente Kali Linux containerizado, hardening avançado e logging seguro.
+- **Fine-tuning (em Dsenvolvimento):** Fine-tuning no argente **Hermes3:8b**, com o objetivo de torna-lo em especialista de Engenharia Civil.
    
 ## 🛠️ Stacks & Skills
 
