@@ -129,13 +129,13 @@ O gerenciamento de conexões do workspace Sinergie Securyt é projetado sob crit
 
 ---
 
-## 📐 Engenharia Civil, Soluções Inteligentes e Tecnológicas & Consultorias
+## 📐 Engenharia Civil, Consultorias e Soluções Tecnológicas Inteligente
 
-A robustez e a rigidez aplicadas ao desenvolvimento desses ecossistemas de softwares originam-se diretamente das melhores práticas de gerenciamento de riscos e conformidade da engenharia tradicional. A unificação desses mundos garante a entrega de ativos de alta previsibilidade, rastreabilidade e qualidade.
+A robustez e a rigidez aplicadas ao desenvolvimento desses projetos e ecossistemas de softwares originam-se diretamente das melhores práticas de gerenciamento de riscos e conformidade da engenharia tradicional que apliquei durante toda a minha vida profissional na engenharia. A unificação desses mundos garante a entrega de ativos de alta previsibilidade, rastreabilidade e qualidade.
 
 * **🏢 Consultoria em Engenharia Civil:** Gerenciamento, Planejamento, Projetos Estruturais e Consultoria Técnica.
 * **⚖️ Conformidade e Normatização:** Mapeamento de processos operacionais, geração de documentos gerenciais e de auditorias de segurança, ISOs e normas técnicas.
-* **📚 Gestão do Conhecimento:** Arquitetura de informação estratégica baseada na ontologia Cortex (PARA-like) estruturada em redes neurais, para aprendizado, gerenciamento e  contínuidade de sistemas, equipes e projetos.
+* **📚 Gestão do Conhecimento:** Arquitetura de informação estratégica baseada na ontologia Cortex (PARA-like) estruturada em redes neurais, para aprendizado, gerenciamento e contínuidade de sistemas, equipes e projetos.
 
 ---
 
